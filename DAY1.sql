@@ -78,7 +78,7 @@ SELECT DATE_ADD(EMPLOYMENT_DATE, INTERVAL 3 MONTH) AS PROBATION_END_DATE
 , S.STAFF_NAME
 , S.ID
 , S.EMPLOYMENT_DATE
- FROM  STAFFS S;
+ FROM STAFFS S;
 
 -- Error Code: 1064. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AS PROBATION_END_DATE , S.STAFF_NAME , S.ID , S.EMPLOYMENT_DATE  FROM  STAFFS ' at line 1
 
@@ -159,5 +159,5 @@ AND STAFF_EMAIL LIKE '%@gmail.com';
 SELECT DEPT_CODE, AVG(SALARY) AS DEPT_AVERAGE_SALARY, COUNT(1) AS NUMBER_OF_DEPT_EMPLOYEES
 , MAX(SALARY) DEPT_MAX_SALARY
 FROM STAFFS
-WHERE DEPT_CODE <>'MK' -- Exclude marketing  <> == !=
+WHERE DEPT_CODE <>'MK' -- Exclude marketing  <> == != // boolean
 GROUP BY DEPT_CODE;
